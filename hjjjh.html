@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+    img {
+      width: 50%;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h1>Click on the photo to see a random image</h1>
+    <img src="http://barbara-5.info/wp-content/uploads/2016-04-23_10-45-21-300x200.jpg" alt='image' id="changeablePic" onClick="change();">
+
+    <script type="text/javascript">
+      var flamethrowerPic = "https://spectrum.ieee.org/image/MzA1NjU0Nw.jpeg";
+      var deadpoolPic = "http://www.comingsoon.net/assets/uploads/2018/04/dp2ics1.jpg";
+      var headphonesPic = "https://dl9.apkaward.com/apk_mod-18x723/com.fourquarters.PleaseDontTouchAnything/img/com.fourquarters.PleaseDontTouchAnything-4.jpg";
+      var laserPic = "https://hackadaycom.files.wordpress.com/2018/07/laser1.jpg?w=800";
+      var speakerPic = "https://cdn-images-1.medium.com/max/350/0*leekoJXpAC3ZEQxU.jpg";
+      var nythingPic = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQupk9Rnj6a4xwkiFRljZJhyjHtVi7XbzHzmpuey3Xsp6USMBFw";
+      var skullPic = "http://clipart-library.com/images/BziXr7TBR.jpg";
+      var mickeyPic = "http://www.originalmmc.com/images/Wednesday/WednesdayOpening.jpg";
+      var storePic = "https://mattbomerfan.com/news/wp-content/uploads/2016/05/amything.jpg";
+      var dogPic = "http://aspengrovevet.com/wp-content/uploads/2018/04/spring-dog-dangers-300x200.jpeg";
+      var animalPics = [flamethrowerPic, deadpoolPic, headphonesPic, laserPic, speakerPic, nythingPic, skullPic, mickeyPic, storePic, dogPic ];
+
+      function change() {
+        var image = document.getElementById('changeablePic');
+        var animalPic = getRandomInt(0, 10)
+        image.src = animalPics[animalPic]
+      }
+
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+        //The maximum is exclusive and the minimum is inclusive
+      }
+    </script>
+  </body>
+</html>
